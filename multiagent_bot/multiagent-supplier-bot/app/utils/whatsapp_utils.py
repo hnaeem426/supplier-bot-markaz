@@ -158,7 +158,7 @@ def generate_response(message_body, wa_id=None, name=None):
         
     except Exception as e:
         logging.error(f"Error in multi-agent response generation: {e}")
-        return "معذرت، آپ کی درخواست پر عمل کرتے وقت خرابی آئی ہے۔ براہ کرم دوبارہ کوشش کریں۔"
+        return "There was some problem while processing your request. Kindly try again."
 
 def process_whatsapp_message(body):
     message = body["entry"][0]["changes"][0]["value"]["messages"][0]
